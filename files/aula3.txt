@@ -1,3 +1,5 @@
 Uso: ./prog add <mensagem>
 testando
 teste caso 3
+Uso: ./prog add <mensagem>
+aula4
