@@ -1,0 +1,3 @@
+Uso: ./prog add <mensagem>
+testando
+teste caso 3
