@@ -1,5 +1,5 @@
-#ifndef W5N_DIARY_H
-#define W5N_DIARY_H
+#ifndef DIARY_H
+#define DIARY_H
 
 #include "Message.h"
 

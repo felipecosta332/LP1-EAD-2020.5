@@ -1,5 +1,5 @@
-#ifndef W5N_DATE_H
-#define W5N_DATE_H
+#ifndef DATE_H
+#define DATE_H
 
 #include <string>
 

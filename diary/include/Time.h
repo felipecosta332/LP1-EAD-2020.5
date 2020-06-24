@@ -1,5 +1,5 @@
-#ifndef W5N_TIME_H
-#define W5N_TIME_H
+#ifndef TIME_H
+#define TIME_H
 
 #include <string>
 

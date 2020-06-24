@@ -1,5 +1,5 @@
-#ifndef W5N_MESSAGE_H
-#define W5N_MESSAGE_H
+#ifndef MESSAGE_H
+#define MESSAGE_H
 
 #include "Date.h"
 #include "Time.h"

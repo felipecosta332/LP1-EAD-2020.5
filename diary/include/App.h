@@ -1,5 +1,5 @@
-#ifndef W5N_APP_H
-#define W5N_APP_H
+#ifndef APP_H
+#define APP_H
 
 #include "Diary.h"
 
