@@ -1,9 +1,4 @@
-/*
-Presença de Hoje: Alocar o array de mensagens dinamicamente, de forma que comporte até 10 mensagens, 
-e adicionar mensagens nele até este limite.
-*/
-
-#include "../include/Diary.h"
+#include "../inc/Diary.hpp"
 
 Diary::Diary(const std::string& filename) : 
     filename(filename), 
@@ -14,11 +9,17 @@ Diary::Diary(const std::string& filename) :
     messages = new Message[messages_capacity];
 }
 
+Diary::~Diary() {
+    delete[] messages;
+}
+
 void Diary::add(const std::string& message)
 {
     // adicionar mensagem no array de mensagens
     if (messages_size < messages_capacity) {
         messages[messages_size].content = message;
+        messages[messages_size].date.set_from_string(get_current_date());
+        messages[messages_size].time.set_from_string(get_current_time());
         messages_size++;
     }
 }

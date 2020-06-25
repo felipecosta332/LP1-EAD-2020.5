@@ -1,9 +1,8 @@
-#ifndef MESSAGE_H
-#define MESSAGE_H
+#ifndef MESSAGE_HPP
+#define MESSAGE_HPP
 
-#include "Date.h"
-#include "Time.h"
-
+#include "Date.hpp"
+#include "Time.hpp"
 #include <string>
 
 struct Message
@@ -12,4 +11,5 @@ struct Message
     Date date;
     Time time;
 };
+
 #endif

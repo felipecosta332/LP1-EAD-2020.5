@@ -1,7 +1,4 @@
-#include "../include/App.h"
-
-#include <iostream>
-#include <string>
+#include "../inc/App.hpp"
 
 App::App(const std::string& filename) : diary(filename)
 {

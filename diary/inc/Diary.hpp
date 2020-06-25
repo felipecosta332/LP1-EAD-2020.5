@@ -1,13 +1,13 @@
-#ifndef DIARY_H
-#define DIARY_H
+#ifndef DIARY_HPP
+#define DIARY_HPP
 
-#include "Message.h"
-
+#include "Message.hpp"
 #include <string>
 
 struct Diary
 {
     Diary(const std::string& filename);
+    ~Diary();
 
     std::string filename;
     Message* messages;
@@ -17,4 +17,5 @@ struct Diary
     void add(const std::string& message);
     void write();
 };
+
 #endif

@@ -1,8 +1,8 @@
-#ifndef APP_H
-#define APP_H
+#ifndef APP_HPP
+#define APP_HPP
 
-#include "Diary.h"
-
+#include "Diary.hpp"
+#include <iostream>
 #include <string>
 
 struct App
@@ -16,4 +16,5 @@ struct App
     void add(const std::string message);
     void list_messages();
 };
+
 #endif
