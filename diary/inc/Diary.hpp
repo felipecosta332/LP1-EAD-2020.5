@@ -2,6 +2,8 @@
 #define DIARY_HPP
 
 #include "Message.hpp"
+#include <iostream>
+#include <fstream>
 #include <string>
 
 struct Diary
