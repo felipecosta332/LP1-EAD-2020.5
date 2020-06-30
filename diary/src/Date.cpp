@@ -1,4 +1,4 @@
-#include "../inc/Date.hpp"
+#include "../inc/Date.h"
 
 Date::Date() : day(0),month(0),year(0) {}
 

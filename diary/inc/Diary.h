@@ -1,7 +1,7 @@
-#ifndef DIARY_HPP
-#define DIARY_HPP
+#ifndef DIARY_H
+#define DIARY_H
 
-#include "Message.hpp"
+#include "Message.h"
 #include <iostream>
 #include <fstream>
 #include <string>

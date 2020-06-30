@@ -1,4 +1,4 @@
-#include "../inc/Time.hpp"
+#include "../inc/Time.h"
 
 std::string format_current_date(const std::string& format) {
     std::time_t time = std::time(nullptr);

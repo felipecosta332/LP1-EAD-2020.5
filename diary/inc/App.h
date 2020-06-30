@@ -1,7 +1,7 @@
-#ifndef APP_HPP
-#define APP_HPP
+#ifndef APP_H
+#define APP_H
 
-#include "Diary.hpp"
+#include "Diary.h"
 #include <iostream>
 #include <string>
 
