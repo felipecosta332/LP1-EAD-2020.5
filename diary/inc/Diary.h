@@ -16,6 +16,7 @@ struct Diary
     size_t messages_size;
     size_t messages_capacity;
 
+    Message* search(std::string what);
     void add(const std::string& message);
     void write();
 };

@@ -6,11 +6,6 @@ Diary::Diary(const std::string& filename) :
     messages_capacity(10), 
     messages(nullptr)
 {
-    /*
-    • Carregar as mensagens previamente salvas ao instanciar um Diary (1,5 pontos):
-    Ao criar uma variável do tipo Diary e passar um nome de arquivo pra ele, o pro-
-    grama deve carregar as mensagens previamente salvas no arquivo, se existirem;
-    */
     messages = new Message[messages_capacity];
     std::ifstream reader;
     std::string line;
@@ -58,16 +53,7 @@ Diary::~Diary() {
     delete[] messages;
 }
 
-void Diary::add(const std::string& message)
-{
-    // adicionar mensagem no array de mensagens
-    /*
-    • Permitir o armazenamento de qualquer quantidade de mensagens no array de
-    mensagens (3,0 pontos):
-    Se, ao tentar adicionar uma nova mensagem o array estiver cheio, vocês devem
-    criar um novo array maior, mover todas as mensagens pra ele, adicionar a mensa-
-    gem nova e deletar o array antigo. Tudo isso sem deixar vazar memória.
-    */
+void Diary::add(const std::string& message) {
     if (messages_size >= messages_capacity) {
         messages_capacity *= 2;
         Message* new_array = new Message[messages_capacity];
@@ -83,14 +69,7 @@ void Diary::add(const std::string& message)
     messages_size++;
 }
 
-void Diary::write()
-{
-    // gravar as mensagens no disco
-    /*
-    • Salvar as mensagens no disco utilizando o formato Markdown (0,5 ponto):
-    Ao adicionar uma nova mensagem no diário, seu programa deve atualizar o arquivo
-    para armazenar a mensagem nova;
-    */
+void Diary::write() {
     if (messages_size > 0) {
         std::ofstream writer;
         Date date = messages[0].date;
@@ -105,4 +84,13 @@ void Diary::write()
         }
         writer.close();
     }
+}
+
+Message* Diary::search(std::string what) {
+    for (int i = 0; i < messages_size; i++) {
+        if (messages[i].content.find(what) != std::string::npos) {
+            return &messages[i];
+        }
+    }
+    return nullptr;
 }

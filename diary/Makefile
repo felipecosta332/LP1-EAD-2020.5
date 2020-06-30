@@ -3,7 +3,7 @@ FLAGS = -I inc -std=c++11 -Wall -O2
 OBJECTS = bin/App.o bin/Date.o bin/Diary.o bin/Main.o bin/Time.o
 PROGRAM = diary.exe
 
-$(PROGRAM): objects $(OBJECTS)
+$(PROGRAM): $(OBJECTS) objects
 	$(CC) $(FLAGS) -o $(PROGRAM) $(OBJECTS)
 
 objects:
