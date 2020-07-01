@@ -6,8 +6,7 @@
 #include <sstream> 
 #include <string>
 
-struct Time
-{
+struct Time {
     Time();
     unsigned int hour;
     unsigned int minute;

@@ -5,8 +5,7 @@
 #include "Time.h"
 #include <string>
 
-struct Message
-{
+struct Message {
     std::string content;
     Date date;
     Time time;

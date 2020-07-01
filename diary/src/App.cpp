@@ -1,8 +1,6 @@
 #include "../inc/App.h"
 
-App::App(const std::string& filename) : diary(filename)
-{
-}
+App::App(const std::string& filename) : diary(filename) {}
 
 int App::run(int argc, char* argv[]) {
     if (argc == 1) {
@@ -40,7 +38,7 @@ void App::add() {
     add(message);
 }
 
-void App::add(const std::string message) {
+void App::add(const std::string& message) {
     diary.add(message);
     diary.write();
 }
@@ -54,19 +52,20 @@ void App::search() {
 }
 
 void App::search(std::string what) {
-    Message* message = diary.search(what);
-    if (message == nullptr) {
+    std::vector<Message*> matches = diary.search(what);
+    if (matches.size() < 1) {
         std::cout << "There is no message with the string \"" << what << "\" in its content." << std::endl;
     } else {
-        std::cout << "The first message found with the string is:" << std::endl;
-        std::cout << message->date.to_string() << " " << message->time.to_string() << " " << message->content << std::endl;
+        std::cout << "The messages found with the string are:" << std::endl;
+        for (int i = 0; i < matches.size(); i++) {
+            std::cout << matches[i]->date.to_string() << " " << matches[i]->time.to_string() << " " << matches[i]->content << std::endl;
+        }
     }
 }
 
 void App::list_messages() {
-    for (size_t i = 0; i < diary.messages_size; ++i) {
-        const Message& message = diary.messages[i];
-        std::cout << "-" << message.content << std::endl;
+    for (size_t i = 0; i < diary.messages.size(); i++) {
+        std::cout << diary.messages[i].date.to_string() << " " << diary.messages[i].time.to_string() << " " << diary.messages[i].content << std::endl;
     }
 }
 

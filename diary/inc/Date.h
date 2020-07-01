@@ -4,8 +4,7 @@
 #include <string>
 #include <sstream>
 
-struct Date
-{
+struct Date {
     Date();
     unsigned int year;
     unsigned int month;

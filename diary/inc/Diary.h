@@ -5,18 +5,15 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
 
-struct Diary
-{
+struct Diary {
     Diary(const std::string& filename);
-    ~Diary();
 
     std::string filename;
-    Message* messages;
-    size_t messages_size;
-    size_t messages_capacity;
+    std::vector<Message> messages;
 
-    Message* search(std::string what);
+    std::vector<Message*> search(std::string what);
     void add(const std::string& message);
     void write();
 };
