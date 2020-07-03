@@ -25,3 +25,13 @@
 - 16:34:09 imperial power
 - 16:34:23 strategic insights
 - 16:35:14 Vectors, pointers, lines, plans, spheres, conics and more...
+
+# 02/07/2020
+
+- 19:52:12 teste
+- 19:52:30 make make
+- 19:52:38 make make make
+- 19:56:02 safely include
+- 19:56:43 kite
+- 19:56:56 flying
+- 19:57:06 A flying bird

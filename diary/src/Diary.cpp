@@ -1,4 +1,4 @@
-#include "../inc/Diary.h"
+#include "Diary.h"
 
 Diary::Diary(const std::string& filename) : filename(filename) {
     std::ifstream reader;

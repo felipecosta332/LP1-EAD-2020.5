@@ -1,10 +1,14 @@
-#include "../inc/App.h"
+#include "App.h"
 
 App::App(const std::string& filename) : diary(filename) {}
 
 int App::run(int argc, char* argv[]) {
     if (argc == 1) {
         return show_usage();
+    }
+    if (argc > 3) {
+        std::cout << "Too many arguments in the command line!" << std::endl;
+        std::cout << "You only need three arguments at most." << std::endl;
     }
 
     std::string action = argv[1];
@@ -17,6 +21,10 @@ int App::run(int argc, char* argv[]) {
         }
     } else if (action == "list") {
         list_messages();
+        if (argc > 2) {
+            std::cout << "Too many arguments in the command line!" << std::endl;
+            std::cout << "You only need two for the 'list' command." << std::endl;
+        }
     } else if (action == "search") {
         if (argc == 2) {
             search();
