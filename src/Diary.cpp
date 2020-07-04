@@ -1,13 +1,12 @@
 #include "Diary.h"
 
 Diary::Diary(const std::string& filename) : filename(filename) {
-    std::ifstream reader;
+    std::ifstream reader(filename, std::ios::in);
     std::string line;
     std::stringstream stream;
     Date date;
     Message message;
     char discard;
-    reader.open(filename, std::ios::in);
     while (reader >> line) {
         if (line[0] == '#') {
             reader >> line;
@@ -46,9 +45,8 @@ void Diary::add(const std::string& message) {
 
 void Diary::write() {
     if (messages.size() > 0) {
-        std::ofstream writer;
+        std::ofstream writer(filename, std::ios::out);
         Date date = messages[0].date;
-        writer.open(filename, std::ios::out);
         writer << "# " << messages[0].date.to_string() << std::endl;
         for (int i = 0; i < messages.size(); i++) {
             if (!date.isEqual(messages[i].date)) {

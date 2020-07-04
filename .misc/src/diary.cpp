@@ -43,10 +43,8 @@ bool checkDate(ifstream &file) {
 }
 
 int main(int argc, char* argv[]) {
-    ofstream diaryWriter;
-    diaryWriter.open("../files/diary.md", ios::app);
-    ifstream diaryReader;
-    diaryReader.open("../files/diary.md", ios::in);
+    ofstream diaryWriter("../files/diary.md", ios::app);
+    ifstream diaryReader("../files/diary.md", ios::in);
     string message;
     if (argc == 1) {
         showInstructions();
