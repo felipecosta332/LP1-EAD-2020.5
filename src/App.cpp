@@ -102,16 +102,20 @@ int App::show_usage() {
 }
 
 int App::interactive() {
+    int trash;
     char action;
     std::string input;
     while (true) {
-        std::cout << "\nDiary Manager" << std::endl;
+        trash = system("clear");
+        std::cout << "Diary Manager" << std::endl;
         std::cout << "\nChoose an action:\n" << std::endl;
         std::cout << "1) List messages" << std::endl;
         std::cout << "2) Add new message" << std::endl;
         std::cout << "3) Search message" << std::endl;
         std::cout << "\n0) Finish\n" << std::endl;
+        std::cout << "Command: ";
         std::cin >> action;
+        trash = system("clear");
         switch (action) {
             case '1':
                 std::cout << "Do you want to list in a specific format(y/n)? ";
@@ -123,6 +127,11 @@ int App::interactive() {
                     list_messages(input);
                 } else {
                     list_messages(format);
+                }
+                std::cout << "Show menu to choose next operation(y/n)? ";
+                std::cin >> action;
+                if (action != 'y') {
+                    return 0;
                 }
                 break;
             case '2':
@@ -136,6 +145,11 @@ int App::interactive() {
                 getline(std::cin, input);
                 getline(std::cin, input);
                 search(input);
+                std::cout << "Show menu to choose next operation(y/n)? ";
+                std::cin >> action;
+                if (action != 'y') {
+                    return 0;
+                }
                 break;
             case '0':
                 return 0;

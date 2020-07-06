@@ -6,7 +6,7 @@ PROGRAM = ./diary.exe
 all: $(PROGRAM)
 
 run: $(PROGRAM)
-	$< interactive
+	./$< interactive
 
 $(PROGRAM): $(OBJECT)
 	$(CC) $(FLAGS) $@ $^

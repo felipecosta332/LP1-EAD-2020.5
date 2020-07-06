@@ -4,6 +4,7 @@
 #include "Diary.h"
 #include <iostream>
 #include <string>
+#include <cstdlib>
 
 struct App {
     Diary diary;
