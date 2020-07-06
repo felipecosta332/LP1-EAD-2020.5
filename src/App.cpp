@@ -87,6 +87,9 @@ void App::list_messages(const std::string& format) {
                     case 'm':
                         std::cout << diary.messages[i].content;
                         break;
+                    default:
+                        std::cout << format[j];
+                        j--;        
                 }
                 j++;
             } else {
