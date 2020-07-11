@@ -22,8 +22,11 @@ If you are running Linux on your machine, open the terminal and follow the steps
 
 The full list of the program commands, what they do, what parameters they take and a few examples are as follow:
 
-- make: compiles the program
-- make run: runs the program in interactive mode
+- make: compiles the source code
+- make run: compiles the source code and runs the program in interactive mode
+- make clean: deletes the object files in the bin directory
+- make rmproper: runs "make clean" and deletes "diary.exe"
+- make test: compiles and runs the "Test.cpp" source code file for the purpose of testing functions
 - ./diary.exe interactive: runs the program in interactive mode
 - ./diary.exe add "string": adds message with content set as "string". The program asks the content if the "string" parameter is omitted.
 - ./diary.exe list "format": list all messages following the pattern set by the "format" parameter. If the "format" parameter is omitted the messages follow the default pattern set by "diary.config".

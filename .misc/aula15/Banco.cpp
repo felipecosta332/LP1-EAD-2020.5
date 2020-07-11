@@ -27,6 +27,8 @@ class Agencia {
 };
 
 class Conta {
+  private:
+    static int totalContas;
   public:
     Conta(){
       this->saldo = 0;
@@ -37,7 +39,9 @@ class Conta {
     int numero;
     std::string titular;
     float saldo;
-    static int totalContas;
+    int getTotalContas(){
+      return totalContas;
+    }
     float saca(float valor) {
       if (valor > saldo) {
         std::cout << "Saldo insuficiente." << std::endl;
@@ -69,7 +73,8 @@ int Conta::totalContas;
 int main() {
   Conta A;
   Conta B;
-  std::cout << "Total de contas: " << A.totalContas << std::endl;
+  std::cout << "Total de contas de A: " << A.getTotalContas() << std::endl;
+  std::cout << "Total de contas de B: " << B.getTotalContas() << std::endl;
   // A.saldo = 0;
   // B.saldo = 0;
   A.deposita(10000);
