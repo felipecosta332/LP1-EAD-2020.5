@@ -31,3 +31,8 @@ The full list of the program commands, what they do, what parameters they take a
 - ./diary.exe add "string": adds message with content set as "string". The program asks the content if the "string" parameter is omitted.
 - ./diary.exe list "format": list all messages following the pattern set by the "format" parameter. If the "format" parameter is omitted the messages follow the default pattern set by "diary.config".
 - ./diary.exe search "string": list all messages with the "string" parameter in their contents. If the "string" parameter is omitted the program asks.
+
+## Links to clone the repository
+
+- HTTPS: <https://github.com/felipecosta332/grocerystore.git>
+- SSH: git@github.com:felipecosta332/grocerystore.git
